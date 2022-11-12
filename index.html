@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var userName;
+        var userValue;
+
+        for (; !userName;) {
+            userName = prompt('Print name');
+        }
+        for (; +userValue !== userValue;) {
+            userValue = +prompt('Print number')
+        }
+
+        padString(userName, userValue);
+
+        function padString(name, value) {
+            if (name.length < value) {
+                var userSymbol = prompt('Print one symbol');
+
+                for (; userSymbol.length > 1;) {
+                    userSymbol = prompt('Print one symbol');
+                }
+
+                var userDirection = prompt('Print < if u want change direction');
+
+                for (; name.length < value;) {
+                    if (userDirection === '<') {
+                        name = userSymbol + name;
+                    }
+                    else {
+                        name += userSymbol;
+                    }
+                }
+            }
+            else {
+                return alert(name);
+            }
+            return alert(name);
+        }
+    </script>
+</body>
+
+</html>
